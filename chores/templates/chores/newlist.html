@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block primary %}
+
+<h2 class="h2">newlist.html</h2>
+
+<form action="/main/newlist/" method="post">
+    {% csrf_token %}
+    <label for="name">List name</label>
+    <input type="text" name="name" id="name" class="form-control" placeholder="Enter a name">
+    <br>
+    <label for="duedate">Due date</label>
+    <input type="datetime-local" name="duedate" id="duedate" class="form-control">
+    <br>
+    <input type="submit" class="btn btn-success" value="Create">
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+<h1>chorelistdetail.html</h1>
+<h2>{{ chorelist }}</h2>
+
+<ul>
+    {% for chore in chorelist.chore_set.all %}
+        <li><a href="/main/{{chorelist.id}}/chores/{{chore.id}}">{{chore}}</a></li>
+    {% endfor %}
+</ul>
